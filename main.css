@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 5px 15px;
+}
+/*home*/
+    .home header nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .home header nav menu li{
+        display: inline;
+        margin-right: 10px;
+    }
+/*end home*/
+
+/*article*/
+/*end article*/
+
+/*coach*/
+/*end coach*/
+
+/*stories*/
+/*end stories*/
+
+/*catogories*/
+/*end categories*/
+
+/*offers*/
+/*end offers*/
+
+/*reviews*/
+/*end reviews*/
+
+/*footer*/
+/*end footer*/
