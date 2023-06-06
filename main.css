@@ -63,7 +63,7 @@ header nav #humberger{
     header nav #humberger{
         display: inline-block;
         color: white;
-        font-size: 35px;
+        font-size: 34px;
         margin-right: 40px;
         cursor: pointer;
     }
