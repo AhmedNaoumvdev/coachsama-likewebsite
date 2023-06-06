@@ -235,7 +235,7 @@ header nav #humberger{
 /*coach*/
     .coach{
         height: 100vh;
-        background: linear-gradient( rgba(0,0,0,0.7),rgba(0,0,0,0.4)), url(/images/health-club-without-people-with-exercise-equipment.jpg);
+        background: linear-gradient( rgba(0,0,0,0.7),rgba(0,0,0,0.4)), url(./images/health-club-without-people-with-exercise-equipment.jpg);
         background-size: cover;
         background-position: center;
         color: white;
