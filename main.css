@@ -388,30 +388,50 @@ header nav #humberger{
     }
     .stories .container .sliders{
         display: flex;
-        justify-content: space-around;
+        justify-content: flex-end;
         align-items: center;
-        width: 100%;
+        width: 60%;
         height: fit-content;
     }
-    .stories .container .sliders .slide{
+    /* .stories .container .sliders .slide{
         width: calc(100% / 3.5);
         height: 400px;
         background-color: gray;
-    }
-    /* .stories .container .sliders .slide.two{
-        height: 430px;
     } */
+    .stories .container .sliders .slide{
+        width: 10%;
+        margin-left: 5px;
+        border-radius: 50px;
+        height: 500px;
+        filter: blur(3px) brightness(.5);
+        transition: width 2s , filter 2s;
+    }
+    .stories .container .sliders .slide img{
+        height: 100%;
+        width: 100%;
+        border-radius: 30px;
+    }
+    .stories .container .sliders .slide.active{
+        width: 90%;
+        filter: blur(0px);
+    }
     @media (max-width: 727px){
         .stories .container h1{
             font-size: 25px;
         }
         .stories .container .sliders{
             flex-direction: column;
+            width: 100%;
+        }
+        .stories .container .sliders .slide.active{
+            width: 100%;
+            height: 30vh;
         }
         .stories .container .sliders .slide{
-            height: 30vh;
-            width: 80%;
+            height: 5vh;
+            width: 100%;
             margin-bottom: 10px;
+            transition: height 2s;
         }
     }
 /*end stories*/
