@@ -409,7 +409,7 @@ header nav #humberger{
     .stories .container .sliders .slide img{
         height: 100%;
         width: 100%;
-        border-radius: 30px;
+        border-radius: 31px;
     }
     .stories .container .sliders .slide.active{
         width: 90%;
