@@ -20,7 +20,10 @@
 header{
     position: fixed;
     top: 0;
+    left: 0;
+    width: 100vw;
     padding: 5px 15px;
+    z-index: 5;
     background: rgba(0, 0, 0, 0.646);
     backdrop-filter: blur(1px);
 }
@@ -28,7 +31,7 @@ header nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100vw;
+    width: 100%;
 }
 a{
     text-decoration: none;
@@ -43,31 +46,91 @@ header nav menu li{
     margin-right: 10px;
     font-size: 22px;
 }
-header nav .socials{
+header nav .socialsdesk{
     margin-right: 40px;
 }
-header nav .socials i{
+header nav .socialsdesk i{
     font-size: 25px;
     margin-left: 10px;
+}
+header nav .socials i:hover{
+    color: #8b9e6e;
 }
 header nav #humberger{
     display: none;
 }
+.notopened{
+    display: none;
+}
+.notopened .socials{
+    display: none;
+}
 @media (max-width: 927px){
-    header nav menu{
+    header nav .desktop{
         display: none;
     }
-    header nav .socials{
+    .notopened{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        top: 0;
+        right: 0;
+        left: 20%;
+        background-color: #13171c;
+        height: 100vh;
+        z-index: 2;
+        color: #e2e7e6;
+        list-style-type: none;
+        font-size: 30px;
+        transform: translateX(100%);
+        transition: transform ease-out 0.3s;
+    }
+    .notopened h1{
+        margin-bottom: 40px;
+    }
+    .notopened li{
+        margin-bottom: 40px;
+    }
+    .mainbody{
+        transition: transform ease-out 0.3s;
+    }
+    .notopened .socials{
+        display: flex;
+        margin-right: 12%;
+    }
+    .notopened .socials i{
+        margin-right: 10px;
+    }
+    header nav .socialsdesk{
         display: none;
     }
     header nav #humberger{
         display: inline-block;
-        color: white;
         font-size: 34px;
-        margin-right: 40px;
         cursor: pointer;
     }
+    .notopened #close{
+        display: inline-block;
+        font-size: 34px;
+        cursor: pointer;
+        margin-right: 25px;
+        justify-self: flex-start;
+        margin-bottom: 80px;
+    }
+    .opned{
+        transform: translateX(0%);
+    }
+    .openmainbody{
+        transform: translateX(-80%);
+    }
+    .stopscrolling{
+        height: 100%;
+        overflow-y: hidden;
+    }
 }
+
 /*end header*/
 
 /*home*/
@@ -200,7 +263,7 @@ header nav #humberger{
             width: 100%;
         }
         .article .container .articles .art{
-            height: 40vh;
+            height: fit-content;
         }
         .article .container h1{
             margin: 15px 0;
@@ -234,7 +297,7 @@ header nav #humberger{
 
 /*coach*/
     .coach{
-        height: 100vh;
+        height: fit-content;
         background: linear-gradient( rgba(0,0,0,0.7),rgba(0,0,0,0.4)), url(./images/health-club-without-people-with-exercise-equipment.jpg);
         background-size: cover;
         background-position: center;
@@ -245,7 +308,7 @@ header nav #humberger{
         align-items: center;
         justify-content: space-evenly;
         width: 100%;
-        height: 100vh;
+        height: fit-content;
     }
     .coach .container img{
         height: 450px;
@@ -267,6 +330,9 @@ header nav #humberger{
         font-size: 25px;
         margin-right: 10px;
     }
+    .coach .container .contents .socials i:hover{
+        color: #8b9e6e;
+    }
     @media (max-width: 927px){
         .coach .container{
             flex-direction: column;
@@ -275,7 +341,7 @@ header nav #humberger{
             text-align: center;
         }
         .coach .container img{
-            height: 350px;
+            height: 100px;
         }
     }
     @media (max-width: 727px){
@@ -302,14 +368,14 @@ header nav #humberger{
 
 /*stories*/
     .stories{
-        height: 100vh;
+        height: fit-content;
     }
     .stories .container{
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
-        height: 100vh;
+        height: fit-content;
     }
     .stories .container h1{
         font-size: 35px;
@@ -348,7 +414,7 @@ header nav #humberger{
 
 /*catogories*/
     .categories{
-        height: 60vh;
+        height: fit-content;
         text-align: center;
         background: linear-gradient( rgba(0,0,0,0.6),rgba(0,0,0,0.5)), url(./images/gym-with-dumbbells-floor.jpg);
         background-size: cover;
@@ -357,7 +423,7 @@ header nav #humberger{
         color: white;
     }
     .categories .container{
-        height: 60vh;
+        height: fit-content;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -421,7 +487,7 @@ header nav #humberger{
     }
     .offers .container .plans .plan{
         width: 31%;
-        height: 97vh;
+        height: fit-content;
         list-style-position: inside;
         border: 2px solid #e2e7e6;
         display: flex;
@@ -492,18 +558,18 @@ header nav #humberger{
     footer{
         background-color: #34363f;
         color: white;
-        height: 20vh;
+        height: fit-content;
     }
     footer .container {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        height: 100%;
+        height: fit-content;
     }
     footer .container .inputfield{
         width: 100%;
-        height: 50%;
+        height: fit-content;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -537,10 +603,8 @@ header nav #humberger{
     }
     @media (max-width: 926px){
         footer{
-            height: 30vh;
         }
         footer .container{
-            height: 30vh;
             text-align: center;
         }
         footer .container .inputfield{
