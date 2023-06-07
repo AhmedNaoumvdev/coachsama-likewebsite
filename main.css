@@ -105,8 +105,6 @@ header nav #humberger{
         justify-content: space-evenly;
 
     }
-    .notopened .socials i{
-    }
     header nav .socialsdesk{
         display: none;
     }
@@ -620,8 +618,6 @@ header nav #humberger{
         font-weight: 500;
     }
     @media (max-width: 926px){
-        footer{
-        }
         footer .container{
             text-align: center;
         }
